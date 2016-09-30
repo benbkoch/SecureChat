@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :production do
   gem 'pg'
+  gem 'letsencrypt-rails-heroku', '~> 0.2.4'
 end
 
 group :development, :test do

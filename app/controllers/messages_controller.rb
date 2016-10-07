@@ -1,16 +1,18 @@
 class MessagesController < ApplicationController
+	before_action :authenticate_user!
 	before_action do
-	   :authenticate_user!
+		#@current_user = current_user
 	   @conversation = Conversation.find(params[:conversation_id])
 	   check_user
 	end
 
 	def index
 		@messages = @conversation.messages
+		render json: @messages
 		@messages.each do |message|
 			message.read = true
 			message.save
-		render json: @messages
+		end
 	end
 
 	def create
@@ -36,13 +38,13 @@ class MessagesController < ApplicationController
  	#end
 
  	def check_user
- 		puts current_user.id
  		if not (current_user.id == @conversation.sender_id or current_user.id == @conversation.recipient_id)
  			render json: {
   			error: "Invalid user!",
   			status: 400
 			}, status: 400
 		end
+
 	end
 
 end

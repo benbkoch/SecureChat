@@ -19,5 +19,5 @@ class Conversation < ActiveRecord::Base
  			return 2
  		end
  	end
- 	
+
 end

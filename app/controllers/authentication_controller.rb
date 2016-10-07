@@ -8,6 +8,8 @@ class AuthenticationController < ApplicationController
     end
   end
 
+
+#
   def register_user
 
     user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])

@@ -4,7 +4,6 @@ class ConversationsController < ApplicationController
  		@names = User.pluck :email
  		@conversations = Conversation.all
       	render json: @names
-      	end
  	end
 
  	def create

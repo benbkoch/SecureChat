@@ -7,6 +7,9 @@ class MessagesController < ApplicationController
 
 	def index
 		@messages = @conversation.messages
+		@messages.each do |message|
+			message.read = true
+			message.save
 		render json: @messages
 	end
 

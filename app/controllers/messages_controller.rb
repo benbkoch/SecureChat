@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
 		end
 
 		render json: @messages
-		puts 'suh dude'
+		puts "I got here!!!"
 		@messages.each do |message|
 			message.mark_read(current_user)
 		end

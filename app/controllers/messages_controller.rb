@@ -7,11 +7,17 @@ class MessagesController < ApplicationController
 	end
 
 	def index
-		@messages = @conversation.messages.where(read: false)
+		userNum = @conversation.one_or_2?(current_user)
+		if(userNum == 1)
+			@messages = @conversation.messages.where(read_by_1: false).order(:created_at)
+		else
+			@messages = @conversation.messages.where(read_by_2: false).order(:created_at)
+		end
+
 		render json: @messages
+		puts 'suh dude'
 		@messages.each do |message|
-			message.read = true
-			message.save
+			message.mark_read(current_user)
 		end
 	end
 

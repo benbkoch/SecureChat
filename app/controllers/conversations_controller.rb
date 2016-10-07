@@ -1,9 +1,9 @@
 class ConversationsController < ApplicationController
  before_action :authenticate_user!
 	def index
- 		@names = User.all
+ 		@names = User.pluck :email
  		@conversations = Conversation.all
-      	render json: @names
+      	render json: @names[0]
  	end
 
  	def create

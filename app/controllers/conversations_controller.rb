@@ -3,8 +3,7 @@ class ConversationsController < ApplicationController
 	def index
  		@names = User.pluck :email
  		@conversations = Conversation.all
- 		respond_to do |format|
-      		format.json{ render json: @names }
+      	render json: @names
       	end
  	end
 

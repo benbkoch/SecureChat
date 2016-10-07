@@ -9,8 +9,8 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'puma', '~> 3.0'
 gem 'devise_token_auth'
 gem 'omniauth'
+gem 'pluck_to_hash'
 
-gem 'acts_as_api'
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

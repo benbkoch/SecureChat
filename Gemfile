@@ -10,6 +10,7 @@ gem 'puma', '~> 3.0'
 gem 'devise_token_auth'
 gem 'omniauth'
 gem 'pluck_to_hash'
+gem 'sendgrid-ruby'
 
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 5.0'

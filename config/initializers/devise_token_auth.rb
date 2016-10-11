@@ -1,6 +1,7 @@
 DeviseTokenAuth.setup do |config|
 
   config.remove_tokens_after_password_reset = true
+    config.default_confirm_success_url = "/"
   # By default the authorization headers will change after each request. The
   # client is responsible for keeping track of the changing tokens. Change
   # this to false to prevent the Authorization header from changing after

@@ -222,6 +222,8 @@ Devise.setup do |config|
   # are using only default views.
   # config.scoped_views = false
 
+  config.default_confirm_success_url = "/"
+
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
   # config.default_scope = :user

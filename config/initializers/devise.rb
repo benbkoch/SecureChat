@@ -222,6 +222,19 @@ Devise.setup do |config|
   # are using only default views.
   # config.scoped_views = false
 
+config.action_mailer.default_url_options = { :host = 'skynetchat.herokuapp.com'}
+
+config.action_mailer.delivery_method = :smtp
+
+config.action_mailer.smtp_settings = {
+address: "smtp.sendgrid.net",
+port: 25,
+domain: "heroku.com", 
+authentication: "plain",
+enable_starttls_auto: true,
+user_name: ENV["SENDGRID_USERNAME"],
+password: ENV["SENDGRID_PASSWORD"]
+}
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).

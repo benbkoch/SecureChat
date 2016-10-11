@@ -23,6 +23,12 @@ class MessagesController < ApplicationController
 
 	def create
  		@message = @conversation.messages.new(user_id: current_user.id, body: params[:body], conversation_id: params[:conversation_id])
+ 		userNum = @conversation.one_or_2?(current_user)
+		if(userNum == 1)
+			@message.read_by_1 = true
+		else
+			@message.read_by_2 = true
+		end
  		if @message.save
 
  			render json: {
@@ -47,8 +53,8 @@ class MessagesController < ApplicationController
  		if not (current_user.id == @conversation.sender_id or current_user.id == @conversation.recipient_id)
  			render json: {
   			error: "Invalid user!",
-  			status: 400
-			}, status: 400
+  			status: 401
+			}, status: 401
 		end
 
 	end

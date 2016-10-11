@@ -1,7 +1,8 @@
 class ConversationsController < ApplicationController
  before_action :authenticate_user!
 	def index
- 		@names = User.pluck_to_hash(:email)
+ 		@names = User.pluck(:email)
+ 		@names.delete(current_user.email)
  		@conversations = Conversation.all
       	render json: @names.to_json
  	end

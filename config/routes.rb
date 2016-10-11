@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+
   mount_devise_token_auth_for 'User', at: 'auth'
 
-  
+  get '/confirmation/index'
 
   get '/conversations/index' => 'conversations#index'
   post '/conversations/create' => 'conversations#create'

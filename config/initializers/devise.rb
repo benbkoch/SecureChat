@@ -222,7 +222,7 @@ Devise.setup do |config|
   # are using only default views.
   # config.scoped_views = false
 
-config.action_mailer.default_url_options = { :host = 'skynetchat.herokuapp.com'}
+config.action_mailer.default_url_options = { :host => 'skynetchat.herokuapp.com'}
 
 config.action_mailer.delivery_method = :smtp
 

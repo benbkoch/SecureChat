@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/messages/index' => 'messages#index'
   post '/messages/create' => 'messages#create'
 
-  #root 'pages#index'
+  root 'pages#index'
   #get 'pages/index'
   get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
 

@@ -1,24 +1,6 @@
-# README
+# SecureChat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Server URL
+Our server is hosted at https://skynetchat.herokuapp.com
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It is currently graded at an A+ on ssllabs.com

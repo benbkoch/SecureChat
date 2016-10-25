@@ -8,6 +8,8 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '410fe479580f0371f6798df09736d30140ce4a154bf625c3513164b0cfa9faaa2ed9313818ffc3e7b075b556605820afc502d746b4a7d77103f16e243df7e956'
 
+  config.encryptor = :scrypt
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -108,7 +110,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'c7cb352aafa36eb4713988d4497f00ac24e5f80b3e7f4377eb258123c9d5d10a08b38e63e5887dd97d66b8e2ec2443a84d660ca0c09685122639b5b3d717d666'
+  config.pepper = 'c7cb352aafa36eb4713988d4497f00ac24e5f80b3e7f4377eb258123c9d5d10a08b38e63e5887dd97d66b8e2ec2443a84d660ca0c09685122639b5b3d717d666'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false

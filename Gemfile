@@ -8,6 +8,8 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 gem 'devise'
+gem 'devise-encryptable'
+gem 'devise-scrypt'
 gem 'jwt'
 gem 'omniauth'
 gem 'pluck_to_hash'

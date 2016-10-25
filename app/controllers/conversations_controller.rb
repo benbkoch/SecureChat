@@ -1,5 +1,5 @@
 class ConversationsController < ApplicationController
- before_action :authenticate_user!
+ before_action :authenticate_request!
 	def index
  		@names = User.pluck(:email)
  		@names.delete(current_user.email)

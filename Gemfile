@@ -7,7 +7,8 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-gem 'devise_token_auth'
+gem 'devise'
+gem 'jwt'
 gem 'omniauth'
 gem 'pluck_to_hash'
 gem 'sendgrid-ruby'

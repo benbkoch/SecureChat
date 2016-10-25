@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  #devise_for :users
   #mount_devise_token_auth_for 'User', at: 'auth'
 
   post 'auth_user' => 'authentication#authenticate_user'

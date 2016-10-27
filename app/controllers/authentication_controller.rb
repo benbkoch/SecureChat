@@ -12,7 +12,7 @@ class AuthenticationController < ApplicationController
 
     user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
     if not (user == nil and user.id == nil)
-      render json: '{success}'
+      render json: '{"register": "success"}'
     else
       render json: {errors: ['Invalid info or taken email']}, status: :unauthorized
     end
